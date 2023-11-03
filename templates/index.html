@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Tutorial</title>
+</head>
+<body>
+    <div style="display: flex; justify-content: space-around;">
+        <h4>
+            <a href="/sakti">Sakti</a>
+        </h4>
+        <h4>
+            <a href="/monev">Monev</a>
+        </h4>
+        <h4>
+            <a href="/input">Input</a>
+        </h4>
+    </div>
+    <div style="border: solid 1px black; width: 80%; height: 80vh; margin: auto; padding: 20px;">
+        <h3>{{title}}</h3>
+        <form style="display: flex; flex-direction: column; gap: 20px;" action="/kirim" method="post">
+            <label for="nama">
+                Nama
+                <input type="text" name="nama" id="nama">
+            </label>
+            <label for="nomor">
+                Nomor
+                <input type="number" name="nomor" id="nomor">
+            </label>
+            <!-- <input type="file"> -->
+            <button type="submit" style="width: 100px;">
+                kirim
+            </button>
+        </form>
+
+        <form style="display: flex; flex-direction: column; gap: 5px;" action="/upload" method="post" enctype="multipart/form-data">
+            <h4>Upload</h4>
+            <input type="file" name="file" id="file" accept=".txt">
+            <button type="submit" style="width: 100px;">
+                Upload file
+            </button>
+        </form>
+    </div>
+</body>
+</html>
